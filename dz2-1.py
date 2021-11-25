@@ -24,7 +24,7 @@ def get_data(filestoread):
     return 0
 def write_to_csv(filetowrite):
     get_data(columnfilesarray)
-    with open(filetowrite, 'w') as f_n:
+    with open(filetowrite, 'w', 'rb') as f_n:
         f_n_writer = csv.writer(f_n, delimiter=',')
         n = 0
         for eachID in os_code_list:
